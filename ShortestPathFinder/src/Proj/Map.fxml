@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proj.MapController">
+   <children>
+      <MenuBar fx:id="menu" layoutY="-3.0" prefHeight="25.0" prefWidth="751.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openImage" mnemonicParsing="false" onAction="#openTheImage" text="Open an Image" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="landmarkName" layoutX="14.0" layoutY="530.0" />
+      <Text layoutX="38.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of Landmark" />
+      <TextField fx:id="culturalValue" layoutX="173.0" layoutY="530.0" />
+      <Text layoutX="211.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cultural Value" />
+      <Button fx:id="addLandmark" layoutX="352.0" layoutY="530.0" mnemonicParsing="false" text="Add Landmark" />
+      <Button fx:id="resetPoints" layoutX="587.0" layoutY="118.0" mnemonicParsing="false" onAction="#reset" text="Reset Points" />
+      <Button fx:id="save" layoutX="703.0" layoutY="530.0" mnemonicParsing="false" onAction="#saveAll" text="Save" />
+      <Button fx:id="load" layoutX="648.0" layoutY="530.0" mnemonicParsing="false" onAction="#loadAll" text="Load" />
+      <ComboBox fx:id="startingPoint" layoutX="587.0" layoutY="32.0" prefHeight="25.0" prefWidth="150.0" />
+      <ComboBox fx:id="endPoint" layoutX="587.0" layoutY="70.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button fx:id="find" layoutX="589.0" layoutY="156.0" mnemonicParsing="false" onAction="#findPathBetweenSelectedPoints" text="Find a Path" />
+          <ImageView fx:id="imageView" fitHeight="447.0" fitWidth="546.0" layoutX="14.0" layoutY="33.0" onMouseClicked="#makeMarker" preserveRatio="true" />
+   </children>
+</AnchorPane>
